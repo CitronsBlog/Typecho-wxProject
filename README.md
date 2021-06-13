@@ -1,2 +1,2 @@
-# Typecho-nodejs
-Typecho API for NodeJS
+# Typecho-wxProject
+Typecho Handsome for wxProject
