@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}"  circular='true' duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this" >
+          <swiper-item class="item">
+            <image class="swiper-item" src="{{item}}" mode="scaleToFill"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    </view>
+    <view class="post-list">
+      <block wx:for="{{pageList}}" wx:key="id">
+        <bk-Card bindtap="toDetails" data-id="{{item.cid}}" list="{{item}}"></bk-Card>
+      </block>
+      <view class="loading" wx:if="{{isLoading}}">我是有底线的~~</view>
+    </view>
+</view>

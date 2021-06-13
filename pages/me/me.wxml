@@ -1,0 +1,70 @@
+<!--pages/me/me.wxml-->
+<view class="container">
+  <!-- 顶部沉浸式卡片 -->
+  <view class="header">
+
+  </view>
+  <!-- 信息模块 -->
+  <view class="info-card">
+    <!-- 用户存在授权则显示信息 -->
+    <view class="tag" wx:if="{{auth}}">
+      <!-- 小印章  -->
+      <block wx:if="{{userInfo.gender == 1}}">
+        <image class="tag-image" src="../../static/images/yingzhang1.png"></image>
+      </block>
+      <block wx:else>
+        <image class="tag-image" src="../../static/images/yingzhang2.png"></image>
+      </block>
+    </view>
+    <view class="user-avatar" wx:if="{{auth}}">
+      <!-- 头像 -->
+      <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="user-info" wx:if="{{auth}}">
+      <view class="user-name">
+        <!-- 性别 -->
+        <text style="color:#4b7bec;margin-right:10rpx" class="iconfont icon-xingbie"
+          wx:if="{{userInfo.gender == 1}}"></text>
+        <text wx:else style="color:#fc5c65;margin-right:10rpx" class="iconfont icon-nvx"></text>
+        <!-- 昵称 -->
+        <text>{{userInfo.nickName}}<text wx:if="{{isLogin}}" style="font-size:24rpx;font-weight: 400;padding-left:10rpx;color:#7a7a7a">({{userInfo.name}})</text></text>
+      </view>
+      <!-- 个签 TODO 未绑定博客账号则不会存在个签 只会显示绑定博客账户 -->
+      <view wx:if="{{isLogin}}" class="desc">有的人还来不及见面，却再也见不到了</view>
+      <view wx:else class="login" bindtap="login">点击绑定/登录</view>
+    </view>
+    <!-- 用户不存在授权信息则显示授权 -->
+    <view wx:if="{{!auth}}">
+      <view class="auth" bindtap="getUserProfile">
+        授 权
+      </view>
+
+    </view>
+  </view>
+  <!-- 设置模块 -->
+  <view class="set-card">
+    <!-- 关于我们 -->
+    <view class="set-card-item">
+      <!-- 关于我们 -->
+      <view class="set-item border-bottom">
+        <view class="set-icon">
+          <!-- icon -->
+          <text style="color:#2bcbba" class="iconfont icon-guanyu"></text>
+        </view>
+        <view class="set-text">
+          <text>关于我们</text>
+        </view>
+      </view>
+      <!-- 更新日志 -->
+      <view class="set-item">
+        <view class="set-icon">
+          <!-- icon -->
+          <text style="color: #fa8231" class="iconfont icon-rizhi"></text>
+        </view>
+        <view class="set-text">
+          <text>更新日志</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

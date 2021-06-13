@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "bk-Card": "../../components/Card/Card"
+  }
+}

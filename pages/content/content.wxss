@@ -1,0 +1,60 @@
+/* pages/content/content.wxss */
+/* @import "../../plugins/comi/comi.wxss";
+/**pages/index.wxss**/
+
+
+.header{
+  width: 750rpx;
+  /* height: 160rpx; */
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1rpx dashed #b6b5b5;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+.bottom{
+  border-bottom: 1rpx dashed #b6b5b5;
+}
+.title{
+  width: 710rpx;
+  /* height: 88rpx; */
+  font-size: 36rpx;
+  color: #333;
+  line-height: 1.5em;
+  padding-left: 20rpx;
+  word-wrap: break-word;
+	white-space: normal;
+	word-break: break-all;
+}
+.content-info{
+  width: 750rpx;
+  height: 50rpx;
+  display: flex;
+  font-size: 24rpx;
+  /* justify-content: space-around; */
+  color: #7A7A7A;
+  padding-top: 10rpx;
+}
+.item{
+  padding-left: 10rpx;
+}
+.post{
+  padding: 30rpx;
+  font-size: 28rpx;
+  color: #5c5c5c;
+}
+.author{
+  margin-left: 20rpx ;
+}
+.time,.viesw{
+  margin-left: 40rpx;
+}
+
+
+.comment{
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40rpx;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wxParse": "../../plugins/wxParse/wxParse",
+    "comment-card": "../../components/commentCard/commentCard"
+  }
+}

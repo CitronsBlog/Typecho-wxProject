@@ -1,0 +1,47 @@
+<!--pages/content/content.wxml-->
+<view class="container">
+  <!-- 头部 -->
+  <view class="header">
+  <!-- 标题 -->
+    <view class="title">
+      {{postInfo.title}}
+    </view>
+    <!-- 文章信息 -->
+    <view class="content-info">
+    <!-- 作者 -->
+      <view class="author">
+        <text class="iconfont icon-zuozhe"></text>
+        <text class="item">{{postInfo.author||'猜猜我是谁'}}</text>
+      </view>
+      <!-- 时间 -->
+      <view class="time">
+        <text class="iconfont icon-shijian"></text>
+        <text class="item" wx:if="{{postInfo.created != null &&  postInfo.modified == null}}">{{postInfo.created}}</text>
+        <text class="item" wx:elif="{{postInfo.modified != null}}">{{postInfo.modified}}</text>
+        <text class="item" wx:else>史前文明</text>
+      </view>
+      <!-- 浏览数 -->
+      <view class="viesw">
+        <text class="iconfont icon-liulan1"></text>
+        <text class="item">{{postInfo.views}}次浏览</text>
+      </view>
+      <!-- 字数 -->
+      <!-- <view class="words">
+        <text class="iconfont icon-gangbi"></text>
+        <text class="item">5555字数</text>
+      </view> -->
+    </view>
+  </view>
+  <view class="post bottom">
+    <wxParse nodes="{{ postInfo.text }}" />
+  </view>
+
+  <!-- 评论模块 TODO 下一个版本增加评论功能 (管理系统没做好 所以鸽一下 不然微信审核过不去) -->
+
+  <view class="comment">
+    <block  wx:for="{{commentList}}" wx:key="coid">
+      <comment-card  comment="{{item}}"></comment-card>
+    </block>
+    
+  </view>
+</view>

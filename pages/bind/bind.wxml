@@ -1,0 +1,36 @@
+<!--pages/bind/bind.wxml-->
+<view class="container">
+  <!-- 头部 -->
+  <view class="header">
+    <view class="avatar">
+      <image class="avatar-image" src="../../static/images/post-img.jpg"></image>
+    </view>
+  </view>
+  <!-- 登录表单 -->
+  <view class="login-post">
+    <view class="username">
+      <text style="color:#4b6584" class="iconfont icon-tubiaoguifan-07 icon"></text>
+      <input class="user-input" bindinput="NickName" placeholder="请输入昵称"  type="text" />
+    </view>
+    
+    <view class="password">
+      <text style="color:#4b6584" class="iconfont icon-youxiang icon"></text>
+      <input class="user-input" bindinput="mail" placeholder="请输入邮箱"  type="text" />
+    </view>
+    
+    <view class="password">
+      <text style="color:#4b6584" class="iconfont icon-mima icon"></text>
+      <input class="user-input" bindinput="password" placeholder="请输入密码" type="password" maxlength="12" />
+    </view>
+    <text style="font-size:24rpx;color:#7a7a7a;width:550rpx;margin-left:120rpx">密码必须包含字母和数字，且长度为6-12</text>
+  </view>
+  <view class="login">
+      <view class="login-btn" bindtap="bind">绑定</view>
+    </view>
+
+  <view class="bind">
+    <text>绑定成功即视为同意</text>
+    <text class="bind-text">《用户隐私保护说明》</text>
+  </view>
+
+</view>

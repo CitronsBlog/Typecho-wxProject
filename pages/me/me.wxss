@@ -1,0 +1,142 @@
+/* pages/me/me.wxss */
+page {
+  background-color: #f2f2f2;
+}
+
+.header {
+  width: 750rpx;
+  height: 300rpx;
+  /* margin-top: -1100rpx; */
+  /* margin-left: -375rpx; */
+  background-color: #4b6584;
+  box-shadow: 0 8rpx 20rpx #4b6584;
+}
+
+.info-card {
+  width: 710rpx;
+  height: 300rpx;
+  background-color: #d1d8e0;
+  margin-top: -170rpx;
+  margin-left: 20rpx;
+  border-radius: 20rpx;
+  box-shadow: 5rpx 10rpx 50rpx #4b6584;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.tag {
+  position: absolute;
+  top: -50rpx;
+  right: -50rpx;
+  opacity: .7;
+}
+
+.tag-image {
+  width: 128rpx;
+  height: 128rpx;
+}
+
+.user-avatar {
+  padding-top: 75rpx;
+  padding-left: 35rpx;
+}
+
+.user-info {
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20rpx;
+}
+
+.desc {
+  /* height: 80rpx; */
+  width: 420rpx;
+  font-size: 26rpx;
+  line-height: 1.7em;
+  margin-top: 20rpx;
+  color: #7a7a7a;
+  /* overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap; */
+  /* 显示多行 */
+  display: -webkit-box;
+  overflow: hidden;
+  /* 5为显示的行数 */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.user-name {
+  /* height: 300rpx; */
+  /* line-height: 300rpx; */
+  width: 400rpx;
+  font-size: 34rpx;
+  font-weight: 700;
+  color: #383838;
+   overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.user-avatar .avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.set-card {
+  width: 660rpx;
+  /* min-height: 600rpx; */
+  margin-left: 45rpx;
+  background-color: #FFF;
+  border-radius: 20rpx;
+  margin-top: 60rpx;
+  box-shadow: 10rpx 10rpx 20rpx #c9c9c9;
+}
+
+.set-item {
+  width: 600rpx;
+  height: 88rpx;
+  display: flex;
+  line-height: 88rpx;
+  margin-left: 40rpx;
+
+}
+
+.set-icon {
+  /* padding-left: 40rpx; */
+  font-size: 44rpx;
+}
+
+.set-text {
+  font-size: 26rpx;
+  padding-left: 20rpx;
+  color: #333333;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e0dfdf;
+}
+
+.auth {
+  width: 250rpx;
+  height: 100rpx;
+  background-color: #333333;
+  border-radius: 20rpx;
+  line-height: 100rpx;
+  text-align: center;
+  /* margin: 0 auto; */
+  margin-left: 230rpx;
+  margin-top: 100rpx;
+  color: #FFF;
+  font-size: 36rpx;
+  box-shadow: 1px 2px 5px #7a7a7a;
+}
+.login{
+  color: #45aaf2;
+  padding-top: 15rpx;
+  padding-left: 20rpx;
+  font-size: 24rpx;
+}

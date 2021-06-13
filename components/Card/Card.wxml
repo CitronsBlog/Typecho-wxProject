@@ -1,0 +1,57 @@
+<!--components/Card.wxml-->
+<!-- <text>components/Card.wxml</text> -->
+<view class="container">
+  <view class="card-item">
+    <!-- 文章内容区域 -->
+    <view class="card-item-content">
+      <!-- 文章标题及内容 -->
+      <view class="card-item-post">
+        <view class="card-item-title">
+        <!-- 去哦打防守反击发呢就妇女解放南京飞机交付你尽快发你技术开发你方式打开毛孔你 -->
+        {{list.title}}
+          <!-- <view class="text">{{list.title}}</view> -->
+        </view>
+        <view class="content">
+          {{list.text}}
+        </view>
+      </view>
+      <!-- 文章头图 -->
+      <view class="card-item-img">
+        <image class="post-img" src="../../static/images/post-img.jpg" mode="widthFix"></image>
+      </view>
+    </view>
+    <!-- 统计模块 -->
+    <view class="card-item-statistics">
+      <!-- 文章标签/1个 -->
+      <view class="item-tag">
+          {{list.mids||'可能是只小迷糊'}}
+      </view>
+      <!-- 统计 -->
+      <view class="item-statistics">
+        <!-- 时间 -->
+        <view class="item-words-numbers">
+          <!-- 图标 -->
+          <view class="card-item-icon">
+            <view class="iconfont icon-shijian"></view>
+          </view>
+          <!-- 时间 -->
+          <view class="item-small-text">
+            <!-- <text> 1256 </text> -->
+            <text class="item" wx:if="{{list.created != null &&  list.modified == null}}">{{list.created}}</text>
+        <text class="item" wx:elif="{{list.modified != null}}">{{list.modified}}</text>
+        <text class="item" wx:else>史前文明</text>
+          </view>
+        </view>
+        <!-- 浏览数量 -->
+        <view class="item-watch">
+          <view class="card-item-icon">
+            <view class="iconfont icon-liulan"></view>
+          </view>
+          <view class="item-small-text">
+            <text> {{list.views}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

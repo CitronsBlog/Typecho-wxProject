@@ -1,0 +1,10 @@
+<!--pages/cross/cross.wxml-->
+<!-- <text>pages/cross/cross.wxml</text> -->
+<view class="container">
+<view class="cross-page">
+  <view wx:for="{{crossList}}" wx:key="coid" class="cross-page-item {{colorList[index%4]}}">
+  {{item.text}}
+  </view>
+</view>
+
+</view>

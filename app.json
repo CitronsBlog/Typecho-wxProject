@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/content/content",
+    "pages/me/me",
+    "pages/login/login",
+    "pages/bind/bind",
+    "pages/cross/cross"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "佛系猫",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F2F2F2"
+  },
+  "tabBar": {
+    "color": "#a3a3a3",
+    "selectedColor": "#4b6584",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "/static/icon/home@active.png",
+        "iconPath": "/static/icon/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "/static/icon/cross@active.png",
+        "iconPath": "/static/icon/cross.png",
+        "pagePath": "pages/cross/cross",
+        "text": "时光机"
+      },
+      {
+        "selectedIconPath": "/static/icon/me@active.png",
+        "iconPath": "/static/icon/me.png",
+        "pagePath": "pages/me/me",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

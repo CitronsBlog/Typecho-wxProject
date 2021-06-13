@@ -1,0 +1,65 @@
+<!--components/commentCard/commentCard.wxml-->
+<view class="comment-item">
+  <!-- 主楼层 -->
+  <view class="comment-item-home">
+    <!-- 评论者信息模块 -->
+    <view class="comment-info">
+      <!-- 主楼层评论者头像 -->
+      <view class="home-avatar">
+        <image wx:if="{{comment.avatar == null || comment.avatar === undefined}}" class="home-avatar-image"
+          src="../../static/images/avatars.png"></image>
+        <image wx:if="{{comment.avatar != null && comment.avatar !== undefined}}" class="home-avatar-image"
+          src="{{comment.avatar}}"></image>
+        <view class="isBlog" wx:if="{{comment.authorId == 1}}">
+          <text style="color: #FFFFFF;font-size: 28rpx" class="iconfont icon-lightning"></text>
+        </view>
+      </view>
+
+      <view class="home-info">
+        <!-- 主楼层评论者昵称 -->
+        <view class="comment-home-nickname">
+          {{comment.author}}
+        </view>
+        <view class="comment-home-time">
+          {{comment.created}}
+        </view>
+      </view>
+    </view>
+
+    <!-- 主楼层评论内容 -->
+    <view class="comment-home-content">
+      {{comment.text}}
+    </view>
+    <view>
+
+    </view>
+  </view>
+  <!-- 子楼层 -->
+  <view class="comment-item-son" wx:for="{{comment.list}}" wx:key="coid">
+    <!-- 子楼层信息模块 -->
+    <view class="son-info">
+      <view class="comment-son-avatar">
+        <image wx:if="{{item.avatar == null || item.avatar === undefined}}" class="home-avatar-image"
+          src="../../static/images/avatars.png"></image>
+        <image wx:if="{{item.avatar != null && item.avatar !== undefined}}" class="home-avatar-image"
+          src="{{item.avatar}}"></image>
+        <view class="isBlog-son" wx:if="{{item.authorId == 1}}">
+          <text style="color: #FFFFFF;font-size: 24rpx" class="iconfont icon-lightning"></text>
+        </view>
+      </view>
+      <view class="son-item-info">
+        <!-- 子评论者昵称 -->
+        <view class="son-nickname">
+          {{item.author}}
+        </view>
+        <view class="son-date">
+          {{item.created}}
+        </view>
+      </view>
+    </view>
+    <!-- 子评论内容 -->
+    <view class="son-content">
+      {{item.text}}
+    </view>
+  </view>
+</view>
