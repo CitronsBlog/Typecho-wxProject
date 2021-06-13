@@ -1,0 +1,24 @@
+<!--pages/update/update.wxml-->
+<view class="container">
+<view class="update">
+  <view class="update-item yellow">
+<view class="title">
+Version 1.0.0
+</view>
+<view class="conetnt">
+  <view>这是Typecho（Handsome）博客小程序版本</view>
+  <view>view相对于原版，精简了许多，重构了大部分接口</view>
+  <view>目前只简单的实现了以下几个功能：</view>
+  <view>1.首页</view>
+  <view>2.时光机</view>
+  <view>3.个人中心</view>
+  <view>4.文章详情</view>
+  <view>5.用户登陆、注册</view>
+  <view>6.评论列表</view>
+  <view>新的功能正在快马加鞭的赶来，下个版本将着重优化文章阅读体验，并同步更新规范文档，因为有些Markdown语法并不符合规范</view>
+  <view>新的后台管理平台也在规划之中了，或许会有移动端的管理平台，当然这有待商榷......</view>
+</view>
+</view>
+</view>
+
+</view>

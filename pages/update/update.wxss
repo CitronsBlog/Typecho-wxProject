@@ -1,0 +1,51 @@
+/* pages/update/update.wxss */
+page{
+  background-color: #F2f2f2;
+}
+.update{
+  width: 710rpx;
+  padding-top: 20rpx;
+}
+.update-item{
+  width: 670rpx;
+  margin-left: 20rpx;
+  padding: 30rpx 20rpx;
+}
+.title{
+  font-size: 34rpx;
+  color: #333333;
+}
+.conetnt{
+  font-size: 28rpx;
+  color: #7a7a7a;
+  padding-top: 20rpx;
+  line-height: 1.8em;
+  margin-left: 20rpx;
+}
+
+.yellow{
+  background-color: rgba(254,211,48,.1);
+  border-left: 6rpx solid #fed330;
+}
+
+.violet{
+  background-color: rgba(165,94,234,.1);
+  border-left: 6rpx solid #a55eea;
+}
+.red{
+  background-color: rgba(252,92,101,.1);
+  border-left: 6rpx solid #fc5c65;
+}
+.orange{
+  background-color: rgba(253,150,68,.1);
+  border-left: 6rpx solid #fd9644;
+}
+
+.green{
+  background-color: rgba(38,222,129,.1);
+  border-left: 6rpx solid #26de81;
+}
+.blue{
+  background-color: rgba(43,203,186,.1);
+  border-left: 6rpx solid #2bcbba;
+}

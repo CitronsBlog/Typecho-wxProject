@@ -1,21 +1,4 @@
 class Http{
-  // static request (name, data ={}) {
-  //  return new Promise((resolve, reject) => {
-  //    wx.cloud.callFunction({
-  //      name,
-  //      data
-  //    }).then(res => {
-  //     res =res.result
-  //     if(res.code === 200){
-  //       resolve(res.data)
-  //     }else{
-  //       reject(res.message)
-  //     }
-  //    }).catch(err => {
-  //      reject(err)
-  //    })
-  //  })
-  // }
   // 远程API
   static request ({url = '',method = 'GET',data = {},header = {}}) {
     if(!url.startsWith('http://') && !url.startsWith('https://')){

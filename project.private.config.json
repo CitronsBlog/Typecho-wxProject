@@ -41,6 +41,12 @@
           "pathName": "pages/cross/cross",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/update/update",
+          "pathName": "pages/update/update",
+          "query": "",
+          "scene": null
         }
       ]
     }

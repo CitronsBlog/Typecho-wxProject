@@ -116,6 +116,11 @@ Page({
       // console.log(token.expirex);
 
     }
+  },
+  toUpdate() {
+    wx.navigateTo({
+      url: `/pages/update/update`
+    })
   }
 
 })

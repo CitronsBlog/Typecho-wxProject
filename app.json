@@ -5,7 +5,8 @@
     "pages/me/me",
     "pages/login/login",
     "pages/bind/bind",
-    "pages/cross/cross"
+    "pages/cross/cross",
+    "pages/update/update"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -52,11 +52,11 @@
           <text style="color:#2bcbba" class="iconfont icon-guanyu"></text>
         </view>
         <view class="set-text">
-          <text>关于我们</text>
+          <text>关于我</text>
         </view>
       </view>
       <!-- 更新日志 -->
-      <view class="set-item">
+      <view class="set-item" bindtap="toUpdate">
         <view class="set-icon">
           <!-- icon -->
           <text style="color: #fa8231" class="iconfont icon-rizhi"></text>
