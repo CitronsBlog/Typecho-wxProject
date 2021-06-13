@@ -1,0 +1,20 @@
+<!--pages/about/about.wxml-->
+<view class="container">
+<!-- <view class="background-image"> -->
+<image class="background-image" src="https://citrons-1256634104.cos.ap-shanghai.myqcloud.com/wx/about.png"></image>
+<view class="content">
+  <view class="item">
+  Hello!各位亲们，欢迎使用本程序，我是这个小程序的开发者，我是一名向着全栈工程师前进的前端工程师，同时也是新一代“躺平青年”。
+  </view>
+  <view class="item">
+    喜欢钓鱼、看妹妹，偶尔打打游戏、听听歌，最喜欢的事情是赖床，最不喜欢的是敲代码！
+  </view>
+  <view class="item">
+    “你可以说我写的功能有问题，但是不能说我写的代码有BUG”
+  </view>
+  <view class="bottom">
+    “我们都要笑的灿烂如花，纵然掺杂着万般心碎.”
+  </view>
+</view>
+<!-- </view> -->
+</view>

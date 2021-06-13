@@ -46,7 +46,7 @@
     <!-- 关于我们 -->
     <view class="set-card-item">
       <!-- 关于我们 -->
-      <view class="set-item border-bottom">
+      <view class="set-item border-bottom" bindtap="toAbout">
         <view class="set-icon">
           <!-- icon -->
           <text style="color:#2bcbba" class="iconfont icon-guanyu"></text>

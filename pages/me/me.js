@@ -121,6 +121,11 @@ Page({
     wx.navigateTo({
       url: `/pages/update/update`
     })
+  },
+  toAbout(){
+    wx.navigateTo({
+      url: `/pages/about/about`
+    })
   }
 
 })

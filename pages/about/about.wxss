@@ -1,0 +1,31 @@
+/* pages/about/about.wxss */
+page{
+  background-color: #f2f2f2;
+}
+.background-image{
+  width: 750rpx;
+  /* height: 100vh; */
+  height: 400rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  box-shadow: 0 5rpx 15rpx #4b6584;
+}
+.content{
+  width: 710rpx;
+  margin-left: 20rpx;
+  padding-top: 450rpx;
+  color: #505050;
+  font-size: 28rpx;
+  line-height: 1.8em;
+}
+
+.bottom{
+  width: 710rpx;
+  position: absolute;
+  bottom: 60rpx;
+  text-align: center;
+  color: #bbbbbb;
+  font-size: 26rpx;
+}
