@@ -33,7 +33,7 @@
     </view>
   </view>
   <view class="post bottom">
-    <wxParse nodes="{{ postInfo.text }}" />
+    <mp-html container-style="font-size:28rpx;line-height:2.3em" selectable="{{true}}" content="{{postInfo.text}}" />
   </view>
 
   <!-- 评论模块 TODO 下一个版本增加评论功能 (管理系统没做好 所以鸽一下 不然微信审核过不去) -->

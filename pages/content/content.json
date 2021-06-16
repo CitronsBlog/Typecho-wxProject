@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "wxParse": "../../plugins/wxParse/wxParse",
-    "comment-card": "../../components/commentCard/commentCard"
+    "comment-card": "../../components/commentCard/commentCard",
+    "mp-html": "../../plugins/mp-html/index"
   }
 }

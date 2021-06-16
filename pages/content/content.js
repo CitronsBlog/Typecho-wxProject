@@ -20,11 +20,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
     let id = options.cid
     this.setData({
       cid:id
-    })        
+    })       
+    this.addViews() 
   },
 
   /**
@@ -43,7 +43,8 @@ Page({
       title: '加载中',
     })
     wx.request({
-      url: `https://api.citrons.cn/contents/getPage?cid=${that.data.cid}`,
+      // url: `https://api.citrons.cn/contents/getPage?cid=${that.data.cid}`,
+      url: `http://localhost:3000/contents/getPage?cid=${that.data.cid}`,
       header: {
         'content-type': 'application/json' // 默认值
       },
@@ -55,7 +56,6 @@ Page({
         wx.hideLoading({
           success: (res) => {},
         })
-        that.addViews()
         that.getPageComment()
       }
     })
