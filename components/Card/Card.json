@@ -1,6 +1,3 @@
 {
-  "component": true,
-  "usingComponents": {
-    "wxParse": "../../plugins/wxParse/wxParse"
-  }
+  "component": true
 }

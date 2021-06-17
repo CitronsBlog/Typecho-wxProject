@@ -126,6 +126,11 @@ Page({
     wx.navigateTo({
       url: `/pages/about/about`
     })
+  },
+  toMarkdown(){
+    wx.navigateTo({
+      url: `/pages/tool/tool`
+    })
   }
 
 })

@@ -43,6 +43,15 @@
   </view>
   <!-- 设置模块 -->
   <view class="set-card">
+    <view class="set-item border-bottom" bindtap="toMarkdown">
+        <view class="set-icon">
+          <!-- icon -->
+          <text style="color: #fa8231" class="iconfont icon-gongjuxiang"></text>
+        </view>
+        <view class="set-text">
+          <text>Markdown阅读</text>
+        </view>
+      </view>
     <!-- 关于我们 -->
     <view class="set-card-item">
       <!-- 关于我们 -->

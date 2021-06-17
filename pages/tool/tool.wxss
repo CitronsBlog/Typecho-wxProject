@@ -1,0 +1,54 @@
+/* pages/tool/tool.wxss */
+.tool{
+  width: 710rpx;
+  margin-left: 20rpx;
+}
+.tool-item{
+  width: 100%;
+  padding-top: 80rpx;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100rpx;
+   border-bottom: 1px solid #a5b1c2;
+}
+.tool-item-card{
+  width: 300rpx;
+  padding: 20rpx;
+  text-align: center;
+  background-color: #a5b1c2;
+  color: #ffffff;
+  border-radius: 20rpx;
+ 
+}
+
+.tool-list{
+  width: 100%;
+}
+.tool-list-card{
+  width: 670rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 1px solid #a5b1c2;
+  padding-left: 20rpx;
+  padding-right: 20rpx; 
+  color: #333333;
+  font-size: 28rpx;
+  text-align: center;
+  /* display: flex; */
+  position: relative;
+}
+.name{
+  width: 600rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.delete{
+  width: 40rpx;
+  height: 40rpx;
+  font-size: 40rpx;
+  color: red;
+  position: absolute;
+  right: 20rpx;
+  top: 0;
+}

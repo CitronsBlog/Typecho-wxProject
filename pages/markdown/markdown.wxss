@@ -1,0 +1,10 @@
+/* pages/markdown/markdown.wxss */
+page{
+  background: #f8f1e2;
+  color: #333333;
+}
+.container{
+  width: 710rpx;
+  margin-left: 20rpx;
+  padding: 20rpx 0;
+}

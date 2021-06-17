@@ -7,7 +7,9 @@
     "pages/bind/bind",
     "pages/cross/cross",
     "pages/update/update",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/tool/tool",
+    "pages/markdown/markdown"
   ],
   "window": {
     "backgroundTextStyle": "light",

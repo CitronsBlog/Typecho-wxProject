@@ -43,8 +43,8 @@ Page({
       title: '加载中',
     })
     wx.request({
-      // url: `https://api.citrons.cn/contents/getPage?cid=${that.data.cid}`,
-      url: `http://localhost:3000/contents/getPage?cid=${that.data.cid}`,
+      url: `https://api.citrons.cn/contents/getPage?cid=${that.data.cid}`,
+      // url: `http://localhost:3000/contents/getPage?cid=${that.data.cid}`,
       header: {
         'content-type': 'application/json' // 默认值
       },

@@ -15,7 +15,7 @@
         {
           "name": "pages/content/content",
           "pathName": "pages/content/content",
-          "query": "cid=279",
+          "query": "cid=278",
           "scene": null
         },
         {
@@ -52,6 +52,18 @@
           "name": "pages/about/about",
           "pathName": "pages/about/about",
           "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/tool/tool",
+          "pathName": "pages/tool/tool",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/markdown/markdown",
+          "pathName": "pages/markdown/markdown",
+          "query": "id=3",
           "scene": null
         }
       ]

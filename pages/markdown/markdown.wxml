@@ -1,0 +1,10 @@
+<!--pages/markdown/markdown.wxml-->
+<!-- <text>pages/markdown/markdown.wxml</text> -->
+<view class="container">
+  <mp-html container-style="font-size:28rpx;line-height:2.3em" markdown="{{true}}" selectable="{{true}}" content="{{text}}" >
+  
+<view style="width:100vw;height:100vh;display:flex; justify-content: center; align-items: center;">
+加载中......
+</view>
+  </mp-html>
+</view>

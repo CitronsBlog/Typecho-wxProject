@@ -1,0 +1,22 @@
+<!--pages/tool/tool.wxml-->
+<!-- <text>pages/tool/tool.wxml</text> -->
+
+<view class="container">
+  <view class="tool">
+    <view class="tool-item">
+      <view class="tool-item-card" bindtap="chooseFile">
+        文件上传
+      </view>
+    </view>
+    <view class="tool-list">
+      <view class="tool-list-card" wx:for="{{list}}" wx:key="id">
+        <view class="name" data-id="{{item.id}}" bindtap="toDetial">
+          {{item.fieldname}}
+        </view>
+        <view class="delete" data-id="{{item.id}}" bindtap="delete">
+        <text class="iconfont icon-lajixiang"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
