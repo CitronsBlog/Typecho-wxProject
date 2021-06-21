@@ -1,0 +1,43 @@
+<!--pages/images/index.wxml-->
+<view class="container">
+  <view class="images-card border-bottom" wx:for="{{imageList}}" wx:key="cid">
+    <view class="item-card-header">
+      <view class="user-avatar">
+        <image src="{{item.avatar}}"></image>
+      </view>
+      <view class="user-info">
+        <view class="user-name">
+          {{item.author}}
+        </view>
+        <view class="post-time">
+          {{item.created}}
+        </view>
+      </view>
+    </view>
+    <view class="contents-desc">
+      {{item.title}}
+    </view>
+    <view class="image-group">
+      <view wx:for="{{item.text}}" class="image-group-item" data-id="{{index}}" data-content="{{item}}" wx:key="*this"
+        bindtap="viewImage">
+        <image src="{{item}}" mode="aspectFit"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 预览图片 -->
+  <view class="view-image" wx:if="{{isView}}">
+    <!-- 关闭 -->
+    <view class="close" bindtap="closeView">
+      <image class="close-image" src="../../static/icon/close.png"></image>
+    </view>
+    <!-- Swiper -->
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" current="{{current}}"
+      interval="{{interval}}" circular='true' duration="{{duration}}">
+      <block wx:for="{{viewListImage}}">
+        <swiper-item class="item">
+          <image class="swiper-item" src="{{item}}" mode="aspectFit"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>

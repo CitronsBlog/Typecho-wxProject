@@ -65,6 +65,12 @@
           "pathName": "pages/markdown/markdown",
           "query": "id=3",
           "scene": null
+        },
+        {
+          "name": "pages/images/index",
+          "pathName": "pages/images/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

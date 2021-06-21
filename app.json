@@ -9,7 +9,8 @@
     "pages/update/update",
     "pages/about/about",
     "pages/tool/tool",
-    "pages/markdown/markdown"
+    "pages/markdown/markdown",
+    "pages/images/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

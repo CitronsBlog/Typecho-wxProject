@@ -16,7 +16,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let token = $storage.Token.get()
+    if(token.length == 0){
+      wx.showToast({
+        title: '需登录使用',
+        icon: "error"
+      })
+      setTimeout(() => {
+        wx.navigateBack({
+          delta: 1
+        })
+      },2000)
+    }
   },
 
   /**
@@ -79,27 +90,21 @@ this.getFileList()
         // tempFilePath可以作为img标签的src属性显示图片
         console.log(res.tempFiles);
         let data = res.tempFiles[0]
-        
+        let user = $storage.User.get()
         wx.uploadFile({
-          url: 'http://localhost:3000/tool/uploadFile', //仅为示例，非真实的接口地址
+          url: 'https://api.citrons.cn/tool/uploadFile', //仅为示例，非真实的接口地址
           filePath: data.path,
           name: data.name,
           formData: {
-            'uid': 1
+            'uid': user.id
           },
           success (res){
-            console.log(1);
-            console.log(res);
             that.getFileList()
-            // const data = res.data
-            //do something
           },
           fail(err){
-            console.log(1);
             console.log(err);
           }
         })
-        // const tempFilePaths = res.tempFiles
       }
     })
   },

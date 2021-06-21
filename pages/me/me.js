@@ -128,9 +128,30 @@ Page({
     })
   },
   toMarkdown(){
-    wx.navigateTo({
-      url: `/pages/tool/tool`
-    })
+    if(this.data.isLogin){
+      wx.navigateTo({
+        url: `/pages/tool/tool`
+      })
+    }else{
+      wx.showToast({
+        title: '用户未登录',
+        icon: 'error'
+      })
+    }
+   
+  },
+
+  toImages(){
+    if(this.data.isLogin){
+      wx.navigateTo({
+        url: `/pages/images/index`
+      })
+    }else{
+      wx.showToast({
+        title: '用户未登录',
+        icon: 'error'
+      })
+    }
   }
 
 })
