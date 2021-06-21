@@ -1,0 +1,21 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+<!-- 搜索框 -->
+ <view class="search-input">
+  <view class="input">
+    <input placeholder="偷得浮生半日闲~" bindinput="input" type="text" maxlength="88" />
+  </view>
+  <view class="search" bindtap="search">
+  <text class="iconfont icon-chaxun"></text>
+  </view>
+ </view>
+
+ <!-- 搜索结果 -->
+ <view class="post-list">
+ <view class="post-list-item" wx:for="{{postList}}" wx:key="cid">
+ <view class="title">
+ {{item.title}}
+ </view>
+ </view>
+ </view>
+</view>

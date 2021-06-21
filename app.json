@@ -10,7 +10,8 @@
     "pages/about/about",
     "pages/tool/tool",
     "pages/markdown/markdown",
-    "pages/images/index"
+    "pages/images/index",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,6 +30,12 @@
         "iconPath": "/static/icon/home.png",
         "pagePath": "pages/index/index",
         "text": "首页"
+      },
+      {
+        "selectedIconPath": "/static/icon/search@active.png",
+        "iconPath": "/static/icon/search.png",
+        "pagePath": "pages/search/search",
+        "text": "搜索"
       },
       {
         "selectedIconPath": "/static/icon/cross@active.png",
