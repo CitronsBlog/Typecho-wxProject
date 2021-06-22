@@ -97,5 +97,13 @@ Page({
         })
       })
     }
+  },
+
+  toContent(e){
+    // console.log(e.currentTarget.dataset.id);
+    let cid = e.currentTarget.dataset.id 
+    wx.navigateTo({
+      url: `/pages/content/content?cid=${cid}`
+    })
   }
 })

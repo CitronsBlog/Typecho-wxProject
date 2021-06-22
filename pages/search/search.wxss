@@ -42,7 +42,7 @@ input{
 
 .post-list{
   width: 710rpx;
-  margin-left: 20rpx;
+  margin-left: 30rpx;
   padding-top: 40rpx;
 }
 .post-list-item .title{

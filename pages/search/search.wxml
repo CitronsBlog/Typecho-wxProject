@@ -13,7 +13,7 @@
  <!-- 搜索结果 -->
  <view class="post-list">
  <view class="post-list-item" wx:for="{{postList}}" wx:key="cid">
- <view class="title">
+ <view class="title" data-id="{{item.cid}}" bindtap="toContent">
  {{item.title}}
  </view>
  </view>

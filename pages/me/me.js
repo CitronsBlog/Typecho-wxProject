@@ -152,6 +152,19 @@ Page({
         icon: 'error'
       })
     }
+  },
+
+  toVideo(){
+    if(this.data.isLogin){
+      wx.navigateTo({
+        url: `/pages/video/video`
+      })
+    }else{
+      wx.showToast({
+        title: '用户未登录',
+        icon: 'error'
+      })
+    }
   }
 
 })

@@ -20,7 +20,7 @@
     <view class="image-group">
       <view wx:for="{{item.text}}" class="image-group-item" data-id="{{index}}" data-content="{{item}}" wx:key="*this"
         bindtap="viewImage">
-        <image src="{{item}}" mode="aspectFit"></image>
+        <image class="item-image" src="{{item}}" mode="widthFix"></image>
       </view>
     </view>
   </view>

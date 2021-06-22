@@ -1,0 +1,35 @@
+<!--pages/video/video.wxml-->
+<view class="container">
+ <!-- Swiper -->
+ <swiper class="swiper"  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" current="{{current}}"
+      interval="{{interval}}" circular="{{false}}" vertical='true' duration="{{duration}}">
+      <block wx:for="{{playList}}" wx:key="id">
+        <swiper-item class="item">
+          <!-- <image class="swiper-item" src="{{item.author}}" mode="aspectFit"></image> -->
+          <!-- {{item.author}} -->
+          <video
+          id="video_{{index}}"
+          class="video-item"
+          loop="{{loop}}"
+          data-id="{{item.id}}"
+          data-index="{{index}}"
+          controls="{{false}}"
+          show-center-play-btn="{{false}}"
+          enable-progress-gesture
+          enable-play-gesture
+          object-fit="contain"
+          bind:touchstart="touchStart" 
+          bind:touchend="touchEnd"
+           src="{{item.url}}"></video>
+           <view class="video-info">
+            <view class="author">
+            @{{item.author}}
+           </view>
+           <view class="desc">
+            {{item.desc}}
+           </view>
+           </view>
+        </swiper-item>
+      </block>
+    </swiper>
+</view>

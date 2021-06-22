@@ -1,0 +1,32 @@
+/* pages/video/video.wxss */
+.swiper{
+  /* border: 1px solid #000; */
+  height: 100vh;
+}
+.video-item{
+  width: 100vw;
+  height: 100vh;
+}
+.video-info{
+  width: 710rpx;
+  position: fixed;
+  bottom: 200rpx;
+  left: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.author{
+  width: 500rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color: #FFF;
+  font-size: 30rpx;
+  letter-spacing: 0.1em;
+}
+.desc{
+  margin-top: 15rpx;
+  color: #e4e4e4;
+  font-size: 26rpx;
+  letter-spacing: 0.05em;
+}

@@ -42,12 +42,12 @@
     </view>
   </view>
 
-    <!-- 设置模块 -->
-    <view class="set-card">
+  <!-- 设置模块 -->
+  <view class="set-card">
     <view class="set-item border-bottom" bindtap="toImages">
         <view class="set-icon">
           <!-- icon -->
-          <text style="color: #fa8231" class="iconfont icon-xiangce"></text>
+          <text style="color: #a55eea" class="iconfont icon-xiangce"></text>
         </view>
         <view class="set-text">
           <text>相册</text>
@@ -62,9 +62,16 @@
           <text>Markdown阅读</text>
         </view>
       </view>
-  </view>
-  <!-- 设置模块 -->
-  <view class="set-card">
+      <!-- 明天上班摸鱼写 -->
+      <view class="set-item border-bottom" bindtap="toVideo">
+        <view class="set-icon">
+          <!-- icon -->
+          <text style="color: #45aaf2" class="iconfont icon-xiaoshipin"></text>
+        </view>
+        <view class="set-text">
+          <text>小视频</text>
+        </view>
+      </view>
     <!-- 关于我们 -->
     <view class="set-card-item">
       <!-- 关于我们 -->
