@@ -92,7 +92,6 @@ Page({
     const that = this
     if(next){
       $api.Video.getVideoList(this.data.pageNum).then(res => {
-        console.log('重新',res);
         let data = this.data.videoList
         let list = data.concat(res)
         that.setData({
@@ -107,7 +106,6 @@ Page({
       })
     }else{
       $api.Video.getVideoList(this.data.pageNum).then(res => {
-        console.log(res);
         that.setData({
           videoList: res
         });
@@ -218,5 +216,16 @@ Page({
       }
     }
 
+  },
+  waitting(){
+    wx.showLoading({
+      title: '加载中',
+    })
+
+  },
+  update(){
+    wx.hideLoading({
+      success: (res) => {},
+    })
   }
 })

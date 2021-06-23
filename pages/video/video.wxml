@@ -18,6 +18,9 @@
           enable-progress-gesture
           enable-play-gesture
           object-fit="contain"
+          bindwaiting="waitting"
+          bindtimeupdate="update"
+          binderror="videoError"
            src="{{item.url}}"></video>
            <view class="video-info">
             <view class="author">
