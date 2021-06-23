@@ -161,86 +161,26 @@ Page({
       allHight
     })
   },
-  /**  
-   * 触摸开始  
-   **/
-  touchStart(e) {
-    console.log("触摸开始")
-    this.data.touchStartX = e.touches[0].clientX;
-    this.data.touchStartY = e.touches[0].clientY;
-  },
-
-  /**  
-   * 触摸结束
-   * 自己看需求改 上下左右都给你写了  
-   **/
-  touchEnd(e) {
-    console.log("触摸结束")
-    let deltaX = e.changedTouches[0].clientX - this.data.touchStartX;
-    let deltaY = e.changedTouches[0].clientY - this.data.touchStartY;
-    if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > Math.abs(deltaY)) {
-      if (deltaX >= 0) {
-        console.log("左滑")
-      } else {
-        console.log("右滑")
-      }
-    } else if (Math.abs(deltaY) > 20 && Math.abs(deltaX) < Math.abs(deltaY)) {
-      if (deltaY < 0) {
-        console.log("上滑")
-        console.log(e);
-        //获取被切换视频的ID
-        let lastindex = e.currentTarget.id
-        //获取当前视频id
-        let indexCurrent = "video_" + (Number(e.currentTarget.dataset.index) + 1)
-        var lastVideoContext = wx.createVideoContext(lastindex, this) //这里对应的视频id
-        lastVideoContext.pause()
-        var indexVideoContext = wx.createVideoContext(indexCurrent, this) //这里对应的视频id
-        indexVideoContext.play()
-        console.log(lastindex,indexCurrent);
-        this.addPlayList(e)
-        if(this.data.videoList.length == 2){
-          this.getVideo(true)
-        }
-      } else {
-        console.log("下滑")
-         //获取被切换视频的ID
-         console.log(e);
-         let lastindex = e.currentTarget.id
-         //获取当前视频id
-         let indexCurrent = "video_" + (Number(e.currentTarget.dataset.index)-1)
-         var lastVideoContext = wx.createVideoContext(lastindex, this) //这里对应的视频id
-         lastVideoContext.pause()
-         var indexVideoContext = wx.createVideoContext(indexCurrent, this) //这里对应的视频id
-         indexVideoContext.play()
-         console.log(lastindex,indexCurrent);
-      }
-    } else {
-      console.log("可能是误触！")
-      console.log(e);
-    }
-  },
 
   //下滑事件向播放列表中添加一个视频 
   addPlayList(e) {
     let videoList = this.data.videoList
     let playList = this.data.playList
+    // 如果e是undefined则是首次加载
     if(e === undefined){
       playList.push(videoList[0])
       playList.push(videoList[1])
       videoList.splice(0,2)
-      console.log(playList);
+      //默认播放第一个视频
       var videoContext = wx.createVideoContext("video_0", this) //这里对应的视频id
-      console.log(videoContext);
         videoContext.play()
       this.setData({
         playList,
         indexCurrent: 0
       })
     }else{
-      let index = e.currentTarget.dataset.index
-      if(index + 2  == playList.length){
-      //   playList.push(videoList[0])
-      // videoList.splice(0,1)
+      //由切换事件触发的添加视频的动作校验播放视频列表的长度是否大于当前播放列表数量+2 大于则新增两个视频
+      if(e + 2  > playList.length){
       playList.push(videoList[0])
       playList.push(videoList[1])
       videoList.splice(0,2)
@@ -252,4 +192,31 @@ Page({
     }
     
   },
+
+  // swiper切换事件
+  changeSwiper(e){
+    // console.log('切换',e);
+    //创建切换前视频的前后文
+    var lastVideoContext = wx.createVideoContext('video_'+this.data.indexCurrent, this) //这里对应的视频id
+    lastVideoContext.pause()
+    let isTouch = e.detail.source
+    let index = e.detail.current
+    //如果是用户触摸切换则暂停上一个视频 播放当前视频
+    if(isTouch == 'touch'){
+      var indexVideoContext = wx.createVideoContext('video_'+index, this) //这里对应的视频id
+      indexVideoContext.play()
+      this.setData({
+        indexCurrent: index
+      })
+      //预加载视频
+      if(this.data.playList.length+1 > index){
+        this.addPlayList(index)
+      }
+      //如果视频列表数量小于等于2则重新获取视频列表
+      if(this.data.videoList.length <= 2){
+        this.getVideo(true)
+      }
+    }
+
+  }
 })

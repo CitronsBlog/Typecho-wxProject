@@ -1,7 +1,11 @@
 /* pages/video/video.wxss */
+page{
+  background-color: #FFF;
+}
 .swiper{
   /* border: 1px solid #000; */
   height: 100vh;
+  position: relative;
 }
 .video-item{
   width: 100vw;
@@ -9,8 +13,8 @@
 }
 .video-info{
   width: 710rpx;
-  position: fixed;
-  bottom: 200rpx;
+  position: absolute;
+  bottom: 150rpx;
   left: 30rpx;
   display: flex;
   flex-direction: column;

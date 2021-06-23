@@ -1,7 +1,7 @@
 <!--pages/video/video.wxml-->
 <view class="container">
  <!-- Swiper -->
- <swiper class="swiper"  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" current="{{current}}"
+ <swiper class="swiper" bindchange="changeSwiper"  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" current="{{current}}"
       interval="{{interval}}" circular="{{false}}" vertical='true' duration="{{duration}}">
       <block wx:for="{{playList}}" wx:key="id">
         <swiper-item class="item">
@@ -18,8 +18,6 @@
           enable-progress-gesture
           enable-play-gesture
           object-fit="contain"
-          bind:touchstart="touchStart" 
-          bind:touchend="touchEnd"
            src="{{item.url}}"></video>
            <view class="video-info">
             <view class="author">
