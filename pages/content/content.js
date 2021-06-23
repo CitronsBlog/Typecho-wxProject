@@ -66,17 +66,22 @@ Page({
       }
     })
 
-    wx.request({
-      url: 'http://ip-api.com/json',
-      success: function (res) {
-          console.log("ip =>", res.data.query, res.data);
-        if(res.data.status == "success"){
-          that.setData({
-            userIp: res.data.query
-          })
-        }
-      }
-  })
+  wx.request({
+    url: 'https://pv.sohu.com/cityjson?ie=utf-8',
+    success(res){
+        var m = JSON.parse(res.data.match(/.*(\{[^\}]+\}).*/)[1] || '{}')
+        console.log('ip =>', m.cip, m)
+        that.setData({
+          userIp: m.cip
+        })
+    },
+    fail(err){
+      console.log(err);
+      that.setData({
+        userIp: '0.0.0.0'
+      })
+    }
+})
   
   },
 

@@ -1,14 +1,14 @@
 <!--pages/video/video.wxml-->
 <view class="container">
  <!-- Swiper -->
- <swiper class="swiper" bindchange="changeSwiper"  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" current="{{current}}"
+ <swiper class="swiper" bindchange="changeSwiper"  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" current="{{indexCurrent}}"
       interval="{{interval}}" circular="{{false}}" vertical='true' duration="{{duration}}">
-      <block wx:for="{{playList}}" wx:key="id">
+      <block wx:for="{{lastPlayList}}" wx:key="id">
         <swiper-item class="item">
           <!-- <image class="swiper-item" src="{{item.author}}" mode="aspectFit"></image> -->
           <!-- {{item.author}} -->
           <video
-          id="video_{{index}}"
+          id="video_{{item.id}}"
           class="video-item"
           loop="{{loop}}"
           data-id="{{item.id}}"
@@ -17,10 +17,11 @@
           show-center-play-btn="{{false}}"
           enable-progress-gesture
           enable-play-gesture
-          object-fit="contain"
           bindwaiting="waitting"
+          custom-cache="{{false}}"
           bindtimeupdate="update"
           binderror="videoError"
+          data-url="{{item.url}}"
            src="{{item.url}}"></video>
            <view class="video-info">
             <view class="author">
