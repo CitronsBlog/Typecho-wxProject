@@ -77,12 +77,12 @@ this.getMarkdownDetail()
   getMarkdownDetail(){
     const that = this
     $api.Tool.getMarkdown(this.data.id).then(res => {
-      console.log(res);
+      console.log(res.data);
       wx.setNavigationBarTitle({
-        title: res[0].fieldname 
+        title: res.data[0].fieldname 
       })
      that.setData({
-      text:res[0].text
+      text:res.data[0].text
      });
     }).catch(err => {
       console.log(err);

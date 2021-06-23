@@ -33,7 +33,7 @@ getAllPage(){
   const that = this
   $api.Home.getList(this.data.pageNum).then(res => {
     let mid = undefined
-    res.forEach(item => {
+    res.data.forEach(item => {
       mid = undefined
      item.mids.forEach(items => {
        that.data.Category.forEach(itemx => {
@@ -44,7 +44,7 @@ getAllPage(){
      })
      item.mids = mid
    })
-   let datas = that.data.pageList.concat(res)
+   let datas = that.data.pageList.concat(res.data)
    let loding = false
    if(res.length == 0){
       loding = true
@@ -68,7 +68,7 @@ getCategory2(){
   $api.Home.getCategory().then(res => {
     console.log(res);
     that.setData({
-      Category: res
+      Category: res.data
      })
   }).catch(err => {
     console.log(err);

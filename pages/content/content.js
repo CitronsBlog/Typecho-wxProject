@@ -1,6 +1,8 @@
 // pages/content/content.js
 // const md = require('./demo.md');
 const app = getApp();
+const $api = app.globalData.api
+const $storage = app.globalData.storage
 Page({
 
   /**
@@ -12,7 +14,10 @@ Page({
     postInfo: {},
     cid: undefined,
     commentList: [],   // 评论列表
-
+    userIp: undefined,
+    text: '',
+    parent: 0,
+    isLogin:false
 	},
 
 
@@ -25,6 +30,7 @@ Page({
       cid:id
     })       
     this.addViews() 
+    this.verification()
   },
 
   /**
@@ -59,6 +65,19 @@ Page({
         that.getPageComment()
       }
     })
+
+    wx.request({
+      url: 'http://ip-api.com/json',
+      success: function (res) {
+          console.log("ip =>", res.data.query, res.data);
+        if(res.data.status == "success"){
+          that.setData({
+            userIp: res.data.query
+          })
+        }
+      }
+  })
+  
   },
 
   /**
@@ -95,7 +114,33 @@ Page({
   onShareAppMessage: function () {
 
   },
-
+    //校验是否存在Token及是否过期
+    verification() {
+      let token = $storage.Token.get()
+      if(token.length == 0){
+        this.setData({
+          isLogin: false
+        })
+      }else{
+        let nowDate = new Date().getTime()
+        if(token.expirex > nowDate){
+          this.setData({
+            isLogin: true
+          })
+        }else{
+          wx.showToast({
+            title: '登录状态过期，请重新登录',
+            icon: 'error'
+          })
+          $storage.Token.remove()
+          this.setData({
+            isLogin: false
+          })
+        }
+        // console.log(token.expirex);
+  
+      }
+    },
   //获取文章评论
  getPageComment(){
    const that = this
@@ -133,5 +178,67 @@ addViews(){
      },
   }
   )
+},
+
+input(e){
+  console.log();
+  let text = e.detail.value
+  this.setData({
+    text
+  })
+},
+
+// 提交评论
+postComment(){
+  if(!isLogin){
+    wx.showToast({
+      title: '请先登录',
+    })
+  }else{
+    const that = this
+    let userinfo = $storage.User.get()
+    let cid = that.data.cid, // 文章id
+        author = userinfo.nickName, //评论用户名称
+        authorId = userinfo.id, //评论用户id
+        mail = userinfo.mail, //评论用户邮箱
+        ip = that.data.userIp,//评论用户ip
+        agent = undefined, //评论用户UA
+        text = that.data.text,//text
+        parent = that.data.parent; //parent
+
+   if(this.data.text != ""){
+    $api.Content.postComment({
+      cid,
+      author,
+      authorId,
+      mail,
+      ip,
+      agent,
+      text,
+      parent
+    }).then(res => {
+      console.log('成功',res);
+      if(res.code == 200){
+        that.setData({
+          text: ""
+        })
+        wx.showToast({
+          title: res.msg
+        })
+      }
+    }).catch(err => {
+      console.log(err);
+      wx.showToast({
+        title: '评论失败',
+        icon: 'error'
+      })
+    })
+   }else{
+     wx.showToast({
+       title: '内容不能为空',
+       icon: 'error'
+     })
+   }
+  }
 }
 })

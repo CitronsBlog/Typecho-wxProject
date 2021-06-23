@@ -81,7 +81,7 @@ Page({
       $api.Search.searchByWord(this.data.value).then(res => {
         // console.log(res);
        that.setData({
-         postList:res
+         postList:res.data
        });
        if(res.length == 0){
         wx.showToast({

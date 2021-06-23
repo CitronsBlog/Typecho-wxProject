@@ -73,7 +73,7 @@ Page({
     const that = this
    $api.Cross.getCrossList(this.data.cid).then(res => {
     that.setData({
-      crossList:res
+      crossList:res.data
     });
    }).catch(err => {
      console.log(err);

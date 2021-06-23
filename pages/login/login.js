@@ -87,6 +87,7 @@ Page({
            let user = $storage.User.get()
            user.name = res.data.data.name
            user.id = res.data.data.uid
+           user.mail = that.data.mail
            $storage.User.set(user)
            $storage.Token.set(res.data.data.token)
           setTimeout(() => {

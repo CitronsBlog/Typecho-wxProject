@@ -37,7 +37,17 @@
   </view>
 
   <!-- 评论模块 TODO 下一个版本增加评论功能 (管理系统没做好 所以鸽一下 不然微信审核过不去) -->
-
+  <!-- 1.游客不能评论
+  2.可以在管理端手动关闭
+  3.评论间隔大于60s
+  4.评论过滤/评论显示需审核/敏感词？ -->
+  <view class="post-comment" wx:if="{{isLogin}}">
+    <textarea class="textarea" bindblur="bindTextAreaBlur"  bindinput="input" value="{{text}}" placeholder="请输入评论内容" maxlength="300" />
+    <view class="reply-btn" bindtap="postComment">
+    提交
+    </view>
+  </view>
+  <!-- 评论列表 -->
   <view class="comment">
     <block  wx:for="{{commentList}}" wx:key="coid">
       <comment-card  comment="{{item}}"></comment-card>

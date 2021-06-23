@@ -113,7 +113,7 @@ this.getFileList()
    $api.Tool.getFileList(this.data.uid).then(res => {
      console.log(res);
     that.setData({
-      list:res
+      list:res.data
     });
    }).catch(err => {
      console.log(err);

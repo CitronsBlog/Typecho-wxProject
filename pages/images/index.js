@@ -87,7 +87,7 @@ Page({
     const that = this
    $api.Images.getImagesList().then(res => {
     let data = []
-    res.forEach(item => {
+    res.data.forEach(item => {
       data = []
       let rex = /\[1]\:[\s\S]*/gmi
       // item.text = rex.exec(item.text)
@@ -103,7 +103,7 @@ Page({
     })
     // console.log(data);
     that.setData({
-      imageList:res
+      imageList:res.data
     });
     console.log(res);
    }).catch(err => {

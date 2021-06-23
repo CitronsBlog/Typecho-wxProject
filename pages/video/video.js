@@ -93,7 +93,7 @@ Page({
     if(next){
       $api.Video.getVideoList(this.data.pageNum).then(res => {
         let data = this.data.videoList
-        let list = data.concat(res)
+        let list = data.concat(res.data)
         that.setData({
           videoList: list
         });
@@ -107,7 +107,7 @@ Page({
     }else{
       $api.Video.getVideoList(this.data.pageNum).then(res => {
         that.setData({
-          videoList: res
+          videoList: res.data
         });
         
       that.addPlayList()

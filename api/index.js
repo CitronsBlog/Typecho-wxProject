@@ -4,6 +4,7 @@ import {Tool} from './Tool'
 import {Images} from './Images'
 import {Search} from './Search'
 import {Video} from './Video'
+import {Content} from './Content'
 
 export default {
   Home,
@@ -11,5 +12,6 @@ export default {
   Tool,
   Images,
   Search,
-  Video
+  Video,
+  Content
 }
