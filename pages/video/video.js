@@ -94,19 +94,13 @@ Page({
     if (next) {
       $api.Video.getVideoList(this.data.pageNum).then(res => {
         let data = this.data.videoList
-        let datas = []
-        res.data.forEach(item=>{
-          if(this.data.playList.indexOf(item) == -1){
-            datas.push(item)
-          }
-        })
-        if(datas.length > 0){
-          let list = data.concat(datas)
+        if(res.data.length > 0){
+          let list = data.concat(res.data)
           that.setData({
             videoList: list
           });
+          
         }
-       
       }).catch(err => {
         console.log(err);
         wx.showToast({

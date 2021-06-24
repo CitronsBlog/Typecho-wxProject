@@ -18,7 +18,29 @@ Page({
     Category:[]
 
   },
-
+  onShareAppMessage() {
+    wx.showLoading({
+      title: '生成图片中',
+    })
+    const promise = new Promise(resolve => {
+      setTimeout(() => {
+        resolve({
+          title: '余生清欢渡余年'
+        })
+        wx.hideLoading({
+          success: (res) => {},
+        })
+      }, 2000)
+    })
+    return {
+      title: '余生清欢渡余年',
+      path: '/page/index/index',
+      promise 
+    }
+  },
+  // onShareTimeline(){
+  
+  // },
   onLoad() {
     this.getCategory2()
   },
