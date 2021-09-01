@@ -70,8 +70,8 @@
           <text>Markdown阅读</text>
         </view>
       </view>
-      <!-- 明天上班摸鱼写 -->
-      <view class="set-item border-bottom" bindtap="toVideo">
+      <!-- 明天上班摸鱼写  = =阿巴阿巴写完了-->
+      <view class="set-item border-bottom" bindtap="toVideo" wx:if="{{videoStatus == 1}}">
         <view class="set-icon">
           <!-- icon -->
           <text style="color: #45aaf2" class="iconfont icon-xiaoshipin"></text>

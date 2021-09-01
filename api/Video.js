@@ -11,6 +11,12 @@ class Video {
   })
 }
 
+static getVideoStatus(){
+  return Http.request({
+    url:'/temp/getVideoPower',
+    method:'get'
+  })
+}
 }
 
 export {

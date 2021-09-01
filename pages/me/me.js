@@ -13,7 +13,9 @@ Page({
     // 用户信息
     userInfo: {},
     //用户是否登录
-    isLogin: false
+    isLogin: false,
+    //视频开关 1 开 2 关
+    videoStatus: 2,
 
   },
 
@@ -47,6 +49,7 @@ Page({
       })
     }
     this.verification()
+    this.getVideoPower()
   },
 
 
@@ -90,6 +93,25 @@ Page({
       url: `/pages/login/login`
     })
   },
+
+  //获取视频开关状态
+  getVideoPower(){
+    // let token = $storage.Token.get()
+    const that = this
+    $api.Video.getVideoStatus().then(res => {
+      that.setData({
+        videoStatus: res.data.status
+       })
+    }).catch(err => {
+      console.log(err);
+      wx.showToast({
+        title: '网络错误',
+        icon: 'error'
+      })
+    })
+
+  },
+
     //校验是否存在Token及是否过期
   verification() {
     let token = $storage.Token.get()
