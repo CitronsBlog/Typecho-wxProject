@@ -54,13 +54,13 @@
   color: #838383;
 }
 .card-item-img{
-  width: 150rpx;
-  height: 150rpx;
+  width: 100rpx;
+  height: 100rpx;
   margin-right: 20rpx;
   border-radius: 10rpx;
   /* overflow: hidden; */
   background-image: url(https://citrons-1256634104.cos.ap-shanghai.myqcloud.com/wx/bg-ico.png);
-  background-size: 150rpx auto;
+  background-size: 100rpx auto;
   position: relative;
   display: inline-block;
   /* border: 1px solid #eaeaea; */
@@ -138,37 +138,37 @@
 }
 /* 游戏 */
 .bg-ico-game{
-  background-position: 0 -150rpx !important;
+  background-position: 0 -100rpx !important;
 }
 /* 笔记 */
 .bg-ico-note{
-  background-position: 0 -300rpx !important;
+  background-position: 0 -200rpx !important;
 }
 /* 闲聊 */
 .bg-ico-chat{
-  background-position: 0 -450rpx !important;
+  background-position: 0 -300rpx !important;
 }
 /* 代码 */
 .bg-ico-code{
-  background-position: 0 -600rpx !important;
+  background-position: 0 -400rpx !important;
 }
 /* 图片 */
 .bg-ico-image{
-  background-position: 0 -750rpx !important;
+  background-position: 0 -500rpx !important;
 }
 /* 网页 */
 .bg-ico-web{
-  background-position: 0 -900rpx !important;
+  background-position: 0 -600rpx !important;
 }
 /* 链接 */
 .bg-ico-link{
-  background-position: 0 -1050rpx !important;
+  background-position: 0 -700rpx !important;
 }
 /* 设计 */
 .bg-ico-design{
-  background-position: 0 -1200rpx !important;
+  background-position: 0 -800rpx !important;
 }
 /* 上锁 */
 .bg-ico-lock{
-  background-position: 0 -1350rpx !important;
+  background-position: 0 -900rpx !important;
 }
