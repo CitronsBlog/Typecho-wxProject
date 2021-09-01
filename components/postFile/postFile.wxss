@@ -1,0 +1,30 @@
+/* components/postFile/postFile.wxss */
+.post-item{
+  width: 690rpx;
+  font-size: 28rpx;
+  color: #333333;
+  padding: 10rpx;
+  margin: 10rpx 0;
+}
+
+.red{
+  background-color: rgba(252,92,101,.1);
+  border-left: 0;
+}
+.orange{
+  background-color: rgba(253,150,68,.1);
+  border-left: 0;
+}
+
+.green{
+  background-color: rgba(38,222,129,.1);
+  border-left: 0;
+}
+.blue{
+  background-color: rgba(43,203,186,.1);
+  border-left: 0;
+}
+.border{
+  border: 1px solid #333333;
+  border-radius: 10rpx;
+}

@@ -38,7 +38,6 @@
       <view class="auth" bindtap="getUserProfile">
         授 权
       </view>
-
     </view>
   </view>
 
@@ -51,6 +50,15 @@
         </view>
         <view class="set-text">
           <text>相册</text>
+        </view>
+      </view>
+      <view class="set-item border-bottom" bindtap="toFile">
+        <view class="set-icon">
+          <!-- icon -->
+          <text style="color: #45aaf2" class="iconfont icon-guidang"></text>
+        </view>
+        <view class="set-text">
+          <text>文章归档</text>
         </view>
       </view>
       <view class="set-item border-bottom" bindtap="toMarkdown">

@@ -165,6 +165,12 @@ Page({
         icon: 'error'
       })
     }
+  },
+
+  toFile() {
+    wx.navigateTo({
+      url: `/pages/postFile/postFile`
+    })
   }
 
 })

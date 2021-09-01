@@ -13,6 +13,14 @@ class Content {
       }
     })
  }
+
+ static getPostFile(){
+  return Http.request({
+    url:'/contents/getPostFile',
+    method:'get',
+    data:{}
+  })
+ }
 }
 
 export {

@@ -1,0 +1,8 @@
+<!--pages/postFile/postFile.wxml-->
+<!-- <text>pages/postFile/postFile.wxml</text> -->
+<view class="container">
+  <view wx:for="{{yearsList}}" wx:key="index" style="font-size:36rpx;text-align:center">
+    {{item}}
+    <post-file list="{{postFileList[0]}}"></post-file>
+  </view>
+</view>

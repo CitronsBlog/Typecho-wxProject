@@ -117,7 +117,7 @@ page {
 }
 
 .border-bottom {
-  border-bottom: 1px solid #e0dfdf;
+  border-bottom: .5px solid #ebebeb;
 }
 
 .auth {

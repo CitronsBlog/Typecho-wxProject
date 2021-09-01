@@ -12,7 +12,8 @@
     "pages/markdown/markdown",
     "pages/images/index",
     "pages/search/search",
-    "pages/video/video"
+    "pages/video/video",
+    "pages/postFile/postFile"
   ],
   "window": {
     "backgroundTextStyle": "light",

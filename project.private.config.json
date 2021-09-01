@@ -83,6 +83,12 @@
           "pathName": "pages/video/video",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/postFile/postFile",
+          "pathName": "pages/postFile/postFile",
+          "query": "",
+          "scene": null
         }
       ]
     }

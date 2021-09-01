@@ -1,0 +1,7 @@
+<!--components/postFile/postFile.wxml-->
+<!-- <text>components/postFile/postFile.wxml</text> -->
+<view>
+  <view wx:for="{{list}}" wx:key="cid" class="post-item border"> 
+    {{item.title}}
+  </view>
+</view>

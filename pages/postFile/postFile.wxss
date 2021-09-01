@@ -1,0 +1,22 @@
+/* pages/postFile/postFile.wxss */
+.container{
+  margin-left: 20rpx;
+  padding: 20rpx 0 40rpx 0;
+}
+.red{
+  /* background-color: rgba(252,92,101,.1); */
+  border-left: 4rpx solid #fc5c65;
+}
+.orange{
+  /* background-color: rgba(253,150,68,.1); */
+  border-left: 4rpx solid #fd9644;
+}
+
+.green{
+  /* background-color: rgba(38,222,129,.1); */
+  border-left: 4rpx solid #26de81;
+}
+.blue{
+  /* background-color: rgba(43,203,186,.1); */
+  border-left: 4rpx solid #2bcbba;
+}

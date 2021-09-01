@@ -7,7 +7,6 @@
       <!-- 文章标题及内容 -->
       <view class="card-item-post">
         <view class="card-item-title">
-        <!-- 去哦打防守反击发呢就妇女解放南京飞机交付你尽快发你技术开发你方式打开毛孔你 -->
         {{list.title}}
           <!-- <view class="text">{{list.title}}</view> -->
         </view>
@@ -16,8 +15,9 @@
         </view>
       </view>
       <!-- 文章头图 -->
-      <view class="card-item-img">
-        <image class="post-img" src="../../static/images/post-img.jpg" mode="widthFix"></image>
+      <view class="card-item-img {{list.icon}}">
+        <!-- <image class="post-img" src="../../static/images/post-img.jpg" mode="widthFix"></image> -->
+        <!-- <image class="post-img" src="../../static/images/bg-ico.png" mode=""></image> -->
       </view>
     </view>
     <!-- 统计模块 -->
